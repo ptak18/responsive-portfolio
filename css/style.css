@@ -1,5 +1,21 @@
-* {
-  box-sizing: border-box;
+:root {
+/* Colours Primary */
+--primary: #21696F3
+--primary-dark: 
+/* Colours Secondary */
+
+/* Neutral Colours*/
+
+/* Page Margin */
+
+}
+
+
+  
+  
+  
+{  
+box-sizing: border-box;
 }
 
 body {
@@ -20,4 +36,226 @@ h6 {
 
 p {
   margin: 0;
+}
+
+
+header {
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1, 
+header nav{
+  
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 2rem;
+}
+
+header nav ul li {
+margin-left: 2rem;
+}
+
+.header {
+  color: blue;
+}
+
+.header + h1 {
+color: green;
+}
+
+@media only screen and (max-width: 800px ) and (min-width:) {
+  .hero-banner {
+  flex-direction: column;
+}
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.nav-items{
+  display: flex;
+  gap: 0 1rem;
+}
+
+.nav-items {
+  position: relative;
+  list-style: none;
+}
+
+.nav-item a,
+.contact-links ul a {
+  color: var(--text);
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.2rem;
+
+}
+
+
+/* media queries */
+@media only screen and (max-width: 800px ) and (min-width:) {}
+
+
+/* Hero Bit */
+.hero-banner {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  min-height: 100px;
+  background-image: url("../images/02-hero-bg.jpg");
+  background-position: center;
+  background-repeat: no no-repeat;
+  background-size: cover;
+}
+
+.hero-title {
+  margin-right: var(--margin-left);
+  background-color: var(--secondary-light);
+  padding: 0.2rem 0.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .hero-banner {
+  justify-content: center;
+  }
+  
+}
+@media only screen and (max-width: 800px) {
+  .hero-banner {
+  justify-content: center;
+  }
+}
+
+/* Main */
+/* About me section */
+
+.page-wrapper {
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right);
+}
+
+.page-section {
+  display: flex;
+  gap: 0 2rem;
+  padding: var(--margin-left);
+}
+
+.page-section h2,.page-section h2 {
+  flex: 1;
+  font-size: 2rem;
+  text-align: right;
+  padding-right: 1rem;
+  border-right: 0.2rem solid var(--primary-dark);
+}
+
+@media only screen and (max-width: 800px) {
+  .hero-banner {
+  justify-content: center;
+  }
+}
+
+.page-section p,
+.page-section .projects-container,
+.page-section .contact-links {
+  flex: 4;
+}
+  
+/* work */
+
+.projects-container {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1, 150px);
+}
+
+.image-positioning {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+align-items: end;
+}
+
+.surf {
+  grid-area: 1 /1 /4 /3;
+  background-image: url("../images/02-portfolio-3.jpg");
+  padding: 1.2rem;
+}
+
+.led {
+  grid-area:4 /1 /5 /2; 
+  padding: 1.2rem;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+.puzzle {
+  grid-area: 5 /1 /6 /2;
+  padding: 1.2rem;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+
+.calculator{
+  grid-area: 4 /2 /5 /3;
+  padding: 1.2rem;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+.ruby {
+grid-area: 5 /2 /6 /3;
+padding: 1.2rem;
+background-image: url("../images/02-run-buddy.jpg");
+backdrop-filter: blur(10px);
+}
+
+ .contact-links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+ }
+   
+.contact-links ul a {
+  color: var(--primary);
+}
+
+
+.card-copy {
+background-color: var(--secondary);
+display: flex;
+flex-direction: column;
+}
+
+.card-copy > * {
+  background-color: var(--secondary-light);
+  padding: 0.2rem 0.5rem;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .page-section {
+  flex-direction: column;
+  }
+
+  .page-section h2 {
+    flex: 1;
+    font-size: 2rem;
+    text-align: center;
+    padding-right: 1rem;
+    border-right: none;
+    border-bottom: 0.2rem solid var(--primary-dark);
+    margin-bottom: 1rem;
+  }
 }
